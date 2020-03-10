@@ -1,0 +1,20 @@
+<h2>Listado de Usuario</h2>
+
+<a href="/usurios" class="btn btn-primary">usuario</a>
+
+<table class="table">
+    <tr>
+        <th>Usuario</th>
+        <th>Password</th>
+    </tr>
+    {{#each listado}}
+
+    <tr>
+        <td>{{this.usuario}}</td>
+        <td>{{this.password}}</td>
+        <td><a href="/borrar/{{this._id}}">Borrar</a></td>
+        <td><a href="/editar/{{this._id}}">Editar</a></td>
+    </tr>
+        
+    {{/each}}
+</table>
